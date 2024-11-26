@@ -17,6 +17,13 @@ public class Balance extends JFrame implements ActionListener{
         JLabel type = new JLabel();
         JLabel mobNum = new JLabel();
         JTextField numMob = new JTextField();
+        JPanel center = new JPanel();
+        center.setSize(990,900);
+        center.setBackground(Color.PINK);
+        center.add(title);
+        center.add(type);
+        center.add(mobNum);
+        center.add(numMob);
         
         title.setText("LOVE CASH");
 
@@ -39,10 +46,7 @@ public class Balance extends JFrame implements ActionListener{
         numMob.setBounds(380,200,150,30);
         numMob.setText("+63");
         
-        this.add(title);
-        this.add(type);
-        this.add(mobNum);
-        this.add(numMob);
+        this.add(center);
         this.setSize(990,900);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);

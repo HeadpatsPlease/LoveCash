@@ -15,7 +15,13 @@ public class home extends JFrame implements ActionListener{
     home(){
         JLabel label = new JLabel();
         JButton start = new JButton();
-        ImageIcon icon = new ImageIcon("C:\\Users\\nexot\\OneDrive\\Documents\\NetBeansProjects\\LoveCashKiosk\\src\\lovecashkiosk\\LovecashIcon.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\REBECCA LACSON HENDE\\Documents\\NetBeansProjects\\LoveCash\\src\\lovecashkiosk\\LovecashIcon.png");
+        JPanel center = new JPanel();
+        center.setSize(990,900);
+        center.setBackground(Color.PINK);
+        center.add(start);
+        center.add(label);
+        center.setLayout(null);
         
         label.setText("LOVE CASH");
         label.setIcon(icon);
@@ -30,9 +36,8 @@ public class home extends JFrame implements ActionListener{
         start.setBackground(Color.LIGHT_GRAY);
         start.addActionListener(this);
         
+        this.add(center);
         this.setResizable(false);
-        this.add(start);
-        this.add(label);
         this.setSize(990,900);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);

@@ -15,12 +15,23 @@ public class Option extends JFrame implements ActionListener{
      JButton cashIn;
      JButton cashOut;
      JButton balance;
+     JPanel center;
     Option (){
         JLabel label = new JLabel();
         cashIn = new JButton();
         cashOut = new JButton();
         balance = new JButton();
-        ImageIcon icon = new ImageIcon("C:\\Users\\nexot\\OneDrive\\Documents\\NetBeansProjects\\LoveCashKiosk\\src\\lovecashkiosk\\LovecashIcon.png");
+        ImageIcon icon = new ImageIcon("C:\\Users\\REBECCA LACSON HENDE\\Documents\\NetBeansProjects\\LoveCash\\src\\lovecashkiosk\\LovecashIcon.png");
+        center = new JPanel();
+        
+        center.setSize(990,900);
+        center.setBackground(Color.PINK);
+        center.add(cashIn);
+        center.add(cashOut);
+        center.add(balance);
+        center.add(label);
+        center.setLayout(null);
+        
         
         label.setText("LOVE CASH");
         label.setIcon(icon);
@@ -47,10 +58,7 @@ public class Option extends JFrame implements ActionListener{
         balance.setBackground(Color.LIGHT_GRAY);
         balance.addActionListener(this);
         
-        this.add(cashIn);
-        this.add(cashOut);
-        this.add(balance);
-        this.add(label);
+       this.add(center);
         this.setSize(990,900);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
@@ -62,6 +70,10 @@ public class Option extends JFrame implements ActionListener{
         if(e.getSource()==balance){
             this.dispose();
             new Balance();
+        }
+        if (e.getSource()== cashIn){
+            this.dispose();
+            new CashIn();
         }
     } 
 }

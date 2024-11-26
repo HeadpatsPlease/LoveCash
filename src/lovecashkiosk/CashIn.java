@@ -9,32 +9,34 @@ import java.awt.event.*;
 import javax.swing.*;
 public class CashIn extends JFrame implements ActionListener{
     CashIn(){
-        JLabel title = new JLabel();
-        JLabel type = new JLabel();
-        JLabel mobNum = new JLabel();
-        JTextField numMob = new JTextField();
-        
-        title.setText("LOVE CASH");
-
-        title.setVerticalAlignment(JLabel.CENTER);
-        title.setHorizontalAlignment(JLabel.CENTER);
-        title.setBounds(0,0,900,100);
-        
-        type.setText("Cash In");
-        type.setHorizontalAlignment(JLabel.CENTER);
-        type.setVerticalAlignment(JLabel.TOP);
-        type.setBounds(0,100,900,100);
+        JLabel label1 = new JLabel("LOVE CASH");
+        JLabel label2 = new JLabel("CASH IN");
+        JLabel label3 = new JLabel("Enter your Mobile Phone: ");
+        JLabel label4 = new JLabel("+ 63 ");
+        JPanel center = new JPanel();
         
         
-        mobNum.setText("Enter your Mobile Number: ");
-        mobNum.setHorizontalAlignment(JLabel.CENTER);
-        mobNum.setVerticalAlignment(JLabel.TOP);
-        mobNum.setBounds(0,180, 900, 100);
+        center.setSize(990,990);
+        center.setBackground(Color.PINK);
+        center.add(label1);
+        center.add(label2);
+        center.add(label3);
+        center.add(label4);
+        center.setLayout(null);
         
+        label1.setBounds(295,0,200,200);
+        label1.setFont(new Font("Arial",Font.PLAIN,25));
         
-        numMob.setBounds(380,200,150,30);
-        numMob.setText("+63");
+        label2.setBounds(295,150,200,200);
+        label2.setFont(new Font("Arial",Font.PLAIN,25));
         
+        label3.setBounds(295,170,300,200);
+        label3.setFont(new Font("Arial",Font.PLAIN,25));
+        
+        label4.setBounds(295,190,200,200);
+        label4.setFont(new Font("Arial",Font.PLAIN,25));
+        
+        this.add(center);
         this.setSize(990,900);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
