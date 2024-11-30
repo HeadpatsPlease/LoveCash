@@ -75,5 +75,9 @@ public class Option extends JFrame implements ActionListener{
             this.dispose();
             new CashIn();
         }
+        if (e.getSource()== cashOut){
+            this.dispose();
+            new CashOut();
+        }
     } 
 }
