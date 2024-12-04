@@ -73,11 +73,11 @@ public class Option extends JFrame implements ActionListener{
         }
         if (e.getSource()== cashIn){
             this.dispose();
-            new CashIn();
+            new CheckMobileNumberCashIn();
             }
         if (e.getSource()== cashOut){
             this.dispose();
-            new CashOut();
+            new CheckMobileNumberCashout();
         }
     } 
 }

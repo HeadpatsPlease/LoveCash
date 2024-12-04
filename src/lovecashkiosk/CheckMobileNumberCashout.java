@@ -4,16 +4,29 @@
  */
 package lovecashkiosk;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-public class CashIn extends JFrame implements ActionListener{
-    CashIn(){
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author nexot
+ */
+public class CheckMobileNumberCashout extends JFrame implements ActionListener {
+    CheckMobileNumberCashout() {
         JLabel label1 = new JLabel("LOVE CASH");
-        JLabel label2 = new JLabel("CASH IN");
+        JLabel label2 = new JLabel("CASH OUT");
         JLabel label3 = new JLabel("Enter your Mobile Phone: ");
         JLabel label4 = new JLabel("+ 63 ");
+        JTextField tf = new JTextField();
         JPanel center = new JPanel();
+        
+        tf.setBounds(300,200,100,100);
         
         
         center.setSize(990,990);
@@ -23,6 +36,7 @@ public class CashIn extends JFrame implements ActionListener{
         center.add(label3);
         center.add(label4);
         center.setLayout(null);
+        center.add(tf);
         
         label1.setBounds(295,0,200,200);
         label1.setFont(new Font("Arial",Font.PLAIN,25));
@@ -49,3 +63,4 @@ public class CashIn extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
     }
 }
+    
