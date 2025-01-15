@@ -18,7 +18,7 @@ public class Amount extends javax.swing.JFrame {
     /**
      * Creates new form AmontIn
      */
-    Accounts acc;
+    protected Accounts acc; // encapsulation
     public Amount() {
         initComponents();
         
@@ -108,7 +108,7 @@ public class Amount extends javax.swing.JFrame {
         if (amount >= 0) {
             double total = amount + takeAmount;
             acc.updateBalance(total); //method
-            JOptionPane.showMessageDialog(null, "Cash In successfully.");
+            //JOptionPane.showMessageDialog(null, "Cash In successfully.");
             MoneyProcess mp = new MoneyProcess(acc);
             mp.setVisible(true);
             this.dispose();

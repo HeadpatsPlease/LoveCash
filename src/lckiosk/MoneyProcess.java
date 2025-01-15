@@ -36,6 +36,7 @@ public class MoneyProcess extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
@@ -52,7 +53,12 @@ public class MoneyProcess extends javax.swing.JFrame {
 
         jLabel2.setText("INSERT YOUR MONEY");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(100, 130, 160, 20);
+        jLabel2.setBounds(100, 200, 160, 20);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setText("CASH IN");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(130, 130, 67, 16);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton1.setText("DONE");
@@ -76,8 +82,10 @@ public class MoneyProcess extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //JOptionPane.showMessageDialog(null, "Balance Updated");
+        JOptionPane.showMessageDialog(null, "Cash In successfully.");
         RhomeIn ri = new RhomeIn(acc);
         ri.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -98,6 +106,7 @@ public class MoneyProcess extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

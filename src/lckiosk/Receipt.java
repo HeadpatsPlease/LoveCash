@@ -5,6 +5,7 @@
 package lckiosk;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,6 +37,7 @@ public class Receipt extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         proccedButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
@@ -53,12 +55,17 @@ public class Receipt extends javax.swing.JFrame {
         jLabel2.setText("YOUR MONEY IS COMING OUT");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(82, 161, 220, 16);
+        jLabel2.setBounds(80, 210, 220, 16);
 
         jLabel3.setText("PRINTING YOUR RECEIPT........");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(82, 207, 190, 16);
+        jLabel3.setBounds(80, 250, 190, 16);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setText("CASH OUT");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(120, 130, 90, 20);
 
         proccedButton.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         proccedButton.setText("DONE");
@@ -80,9 +87,10 @@ public class Receipt extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void proccedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proccedButtonActionPerformed
+        JOptionPane.showMessageDialog(null, "Cash out successfully.");
         RhomeIn ri = new RhomeIn(acc);
         ri.setVisible(true);
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_proccedButtonActionPerformed
 
     /**
@@ -124,6 +132,7 @@ public class Receipt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton proccedButton;
     // End of variables declaration//GEN-END:variables
 }

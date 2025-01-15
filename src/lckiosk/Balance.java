@@ -40,7 +40,7 @@ public class Balance extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         PhoneNumber = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        pin = new javax.swing.JTextField();
+        pin = new javax.swing.JPasswordField();
         proceedInput = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
@@ -81,7 +81,7 @@ public class Balance extends javax.swing.JFrame {
             }
         });
         getContentPane().add(pin);
-        pin.setBounds(160, 225, 71, 22);
+        pin.setBounds(160, 222, 64, 20);
 
         proceedInput.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         proceedInput.setText("OKAY");
@@ -107,12 +107,12 @@ public class Balance extends javax.swing.JFrame {
         String pinInput = pin.getText();
         
         
-        if (acc.getAccountList().contains(phoneNumber) && acc.getAccountList().contains(pinInput)){
+        if (acc.getAccount(0).equals(phoneNumber) && acc.getAccount(1).equals(pinInput)) {
             JOptionPane.showMessageDialog(null, "Login Successfully");
             JOptionPane.showMessageDialog(null, "your Balance is: " + acc.getAccount(2));   
             RhomeIn ri = new RhomeIn(acc);
             ri.setVisible(true);
-            dispose();
+            this.dispose();
         }else {
             JOptionPane.showMessageDialog(null, "Invalid Mobile Phone or Password");
         }  
@@ -121,13 +121,13 @@ public class Balance extends javax.swing.JFrame {
     private void pinInputActionPerformed() {                                         
     }//GEN-LAST:event_proceedInputActionPerformed
 
-    private void pinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pinActionPerformed
-
     private void PhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhoneNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PhoneNumberActionPerformed
+
+    private void pinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,7 +169,7 @@ public class Balance extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField pin;
+    private javax.swing.JPasswordField pin;
     private javax.swing.JButton proceedInput;
     // End of variables declaration//GEN-END:variables
 

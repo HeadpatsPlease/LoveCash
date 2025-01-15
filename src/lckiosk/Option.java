@@ -58,7 +58,7 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cashInButton);
-        cashInButton.setBounds(50, 290, 100, 34);
+        cashInButton.setBounds(60, 240, 100, 34);
 
         cashOutButton.setText("CASH OUT");
         cashOutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,7 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cashOutButton);
-        cashOutButton.setBounds(50, 240, 100, 34);
+        cashOutButton.setBounds(180, 240, 100, 34);
 
         balanceButton.setText("BALANCE");
         balanceButton.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class Option extends javax.swing.JFrame {
             }
         });
         getContentPane().add(balanceButton);
-        balanceButton.setBounds(180, 240, 100, 34);
+        balanceButton.setBounds(60, 290, 100, 34);
 
         homeButton.setText("HOME");
         homeButton.addActionListener(new java.awt.event.ActionListener() {

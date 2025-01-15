@@ -10,15 +10,15 @@ import javax.swing.ImageIcon;
  *
  * @author nexot
  */
-public class RhomeIn extends javax.swing.JFrame {
+public class RhomeIn extends javax.swing.JFrame { //inheritance
     Accounts acc;
     /**
      * Creates new form RhomeIn
      */
-    public RhomeIn() {
+    public RhomeIn() { // polymorphism
         initComponents();
     }
-    public RhomeIn(Accounts acc) {
+    public RhomeIn(Accounts acc) { //polymorohism
         initComponents();
         this.acc = acc;
         ImageIcon icon = new ImageIcon("src\\lckiosk\\icon.png");
@@ -80,6 +80,7 @@ public class RhomeIn extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Option o = new Option(acc);
         o.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

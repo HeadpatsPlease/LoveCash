@@ -78,6 +78,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         Option o = new Option(acc);
         o.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_startButtonActionPerformed
 
     /**

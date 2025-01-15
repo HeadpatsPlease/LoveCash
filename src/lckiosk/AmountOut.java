@@ -112,13 +112,16 @@ public class AmountOut extends javax.swing.JFrame {
         try {
             if(takeAmount > amount){
                 JOptionPane.showMessageDialog(null, "Invalid Amount");
+                Option o = new Option(acc);
+                o.setVisible(true);
+                this.dispose();
             }else if (amount >= 0) {
                 double total = amount - takeAmount;
                 acc.updateBalance(total);
-                JOptionPane.showMessageDialog(null, "Cash out successfully.");
+               // JOptionPane.showMessageDialog(null, "Cash out successfully.");
                 Receipt rt = new Receipt(acc);
                 rt.setVisible(true);
-                dispose();
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid Amount");
             }

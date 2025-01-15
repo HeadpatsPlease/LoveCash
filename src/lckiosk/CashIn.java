@@ -42,7 +42,7 @@ public class CashIn extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         phoneNumber = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        pin = new javax.swing.JTextField();
+        pin = new javax.swing.JPasswordField();
         proceedButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
@@ -77,14 +77,8 @@ public class CashIn extends javax.swing.JFrame {
         jLabel4.setText("Enter PIN :");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(80, 250, 80, 16);
-
-        pin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pinActionPerformed(evt);
-            }
-        });
         getContentPane().add(pin);
-        pin.setBounds(170, 250, 80, 22);
+        pin.setBounds(170, 250, 64, 22);
 
         proceedButton.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         proceedButton.setText("OKAY");
@@ -109,11 +103,11 @@ public class CashIn extends javax.swing.JFrame {
         String phoneNum = phoneNumber.getText();
         String pinInput = pin.getText();
         
-        if (acc.getAccountList().contains(phoneNum) && acc.getAccountList().contains(pinInput)){
+        if (acc.getAccount(0).equals(phoneNum) && acc.getAccount(1).equals(pinInput)){
             JOptionPane.showMessageDialog(null, "Login Successfully");
             Amount ai = new Amount(acc);
             ai.setVisible(true);
-            dispose();
+            this.dispose();
         }else {
             JOptionPane.showMessageDialog(null, "Invalid Mobile Phone or Password");
         }  
@@ -125,10 +119,6 @@ public class CashIn extends javax.swing.JFrame {
     private void phoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_phoneNumberActionPerformed
-
-    private void pinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +160,7 @@ public class CashIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField phoneNumber;
-    private javax.swing.JTextField pin;
+    private javax.swing.JPasswordField pin;
     private javax.swing.JButton proceedButton;
     // End of variables declaration//GEN-END:variables
 }
